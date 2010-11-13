@@ -13,7 +13,7 @@
 class sfResque extends Resque
 {
     
-    protected static function tokenize($class, $args = null) {
+    public static function tokenize($class, $args = null) {
         return md5($class.json_encode($args));
     }
     
@@ -21,19 +21,26 @@ class sfResque extends Resque
         return (self::redis()->sismember('sfresque:queue:'.$queue, self::tokenize($class, $args)) == '1');
     }
     
+    public static function track_queue($queue, $token) {
+        self::redis()->sadd('sfresque:queue:'.$queue, $token);
+    }
+    
+    public static function remove_track_queue($queue, $token) {
+        var_dump($token);
+        self::redis()->srem('sfresque:queue:'.$queue, $token);
+    }
+    
     /**
      * @see Resque::enqueue
      */
     public static function enqueue($queue, $class, $args = null, $trackStatus = false) {
-        var_dump($class, $args);
-        self::redis()->sadd('sfresque:queue:'.$queue, self::tokenize($class, $args));
+        self::track_queue($queue, self::tokenize($class, $args));
         return parent::enqueue($queue, $class, $args, $trackStatus);
     }
     
     public static function reserve($queue) {
         $job = parent::reserve($queue);
-        var_dump($job->payload['class'], $job->payload['args']);
-        self::redis()->srem('sfresque:queue:'.$queue, self::tokenize($job->payload['class'], $job->payload['args']));
+        self::remove_track_queue($queue, self::tokenize($job->payload['class'], $job->payload['args']));
         return $job;
     }
     

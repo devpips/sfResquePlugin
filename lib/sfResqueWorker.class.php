@@ -41,5 +41,12 @@ class sfResqueWorker extends Resque_Worker
     if($this->connection)
         $databaseManager->shutdown();
   }
+  
+  public function doneWorking()
+  {
+    $job = $this->job();
+    sfResque::remove_track_queue($job['queue'], sfResque::tokenize($job['payload']['class'], $job['payload']['args']));
+    return parent::doneWorking();
+  }
     
 }
