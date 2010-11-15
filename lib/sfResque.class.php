@@ -26,7 +26,6 @@ class sfResque extends Resque
     }
     
     public static function remove_track_queue($queue, $token) {
-        var_dump($token);
         self::redis()->srem('sfresque:queue:'.$queue, $token);
     }
     
