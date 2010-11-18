@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.9.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0     http://pear.php.net/dtd/tasks-1.0.xsd     http://pear.php.net/dtd/package-2.0     http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfResquePlugin</name>
+ <channel>plugins.symfony-project.org</channel>
+ <summary>php-resque for symfony</summary>
+ <description>A simple wrapper for php-resque to use symfony&apos;s configuration.</description>
+ <lead>
+  <name>Stephen Craton</name>
+  <user>scraton</user>
+  <email>scraton@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-11-18</date>
+ <time>15:33:48</time>
+ <version>
+  <release>0.1.0</release>
+  <api>0.1.0</api>
+ </version>
+ <stability>
+  <release>alpha</release>
+  <api>alpha</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+ <notes>
+&lt;none&gt;
+ </notes>
+ <contents>
+  <dir baseinstalldir="." name="/">
+   <file baseinstalldir="." md5sum="6f02486d5e55e6c0ad75a6bbf9d1dbca" name="config/resque.yml" role="data" />
+   <file baseinstalldir="." md5sum="6eb789996dc256f733b329c77ae2bc3f" name="config/sfResquePluginConfiguration.class.php" role="php" />
+   <file baseinstalldir="." md5sum="c23415a78232b0eb6dbe1eef147d8887" name="lib/sfResque.class.php" role="php" />
+   <file baseinstalldir="." md5sum="f51639b130bc2b4f0de4429f78e2f269" name="lib/sfResqueWorker.class.php" role="php" />
+   <file baseinstalldir="." md5sum="64c2584056d9ad4c47aa0e4f11f0b8c2" name="lib/config/sfResqueConfigHandler.class.php" role="php" />
+   <file baseinstalldir="." md5sum="39445c580962a203b65888f3145148fa" name="lib/task/resqueWorkerTask.class.php" role="php" />
+   <file baseinstalldir="." md5sum="7fffa1ad94b78ddbc061363876724c42" name="lib/test/bootstrap.php" role="php" />
+   <file baseinstalldir="." md5sum="3a4e65c7416f31beedba904f949947cf" name="lib/vendor/php-resque/build.xml" role="data" />
+   <file baseinstalldir="." md5sum="ae8207187caafa89c74f5bb6bb43f474" name="lib/vendor/php-resque/CHANGELOG.markdown" role="data" />
+   <file baseinstalldir="." md5sum="76a28f4561c61a39ba3b27ea75bba2f9" name="lib/vendor/php-resque/LICENSE" role="data" />
+   <file baseinstalldir="." md5sum="59c1d60fc86ddc56682a52621e70222e" name="lib/vendor/php-resque/phpunit.xml" role="data" />
+   <file baseinstalldir="." md5sum="d41d8cd98f00b204e9800998ecf8427e" name="lib/vendor/php-resque/README" role="data" />
+   <file baseinstalldir="." md5sum="4e6a2b7fef6b38c3b9b74068310f0512" name="lib/vendor/php-resque/README.markdown" role="data" />
+   <file baseinstalldir="." md5sum="13d56f755f13999c49b5d0367184348a" name="lib/vendor/php-resque/resque.php" role="php" />
+   <file baseinstalldir="." md5sum="e7687e3c9d29b8dfaec30d7dd71da49e" name="lib/vendor/php-resque/TODO.markdown" role="data" />
+   <file baseinstalldir="." md5sum="3e2b31c72181b87149ff995e7202c0e3" name="lib/vendor/php-resque/bin/resque" role="data" />
+   <file baseinstalldir="." md5sum="49b5632b720545b9e28470fe3495d382" name="lib/vendor/php-resque/demo/bad_job.php" role="php" />
+   <file baseinstalldir="." md5sum="31344b8630306bd5ccae2e8ebce57fd1" name="lib/vendor/php-resque/demo/check_status.php" role="php" />
+   <file baseinstalldir="." md5sum="14c3368792452456b7e8c2f72b4e446c" name="lib/vendor/php-resque/demo/job.php" role="php" />
+   <file baseinstalldir="." md5sum="52fd2fba1cbd889860a4f841854811e7" name="lib/vendor/php-resque/demo/long_job.php" role="php" />
+   <file baseinstalldir="." md5sum="ca3862edcdbc5a6860d4884378e6e6d7" name="lib/vendor/php-resque/demo/php_error_job.php" role="php" />
+   <file baseinstalldir="." md5sum="c162621d6cb7f330778bdba527203302" name="lib/vendor/php-resque/demo/queue.php" role="php" />
+   <file baseinstalldir="." md5sum="4eea0ba9efff4f7a3c5427ee2cb3eeb7" name="lib/vendor/php-resque/demo/resque.php" role="php" />
+   <file baseinstalldir="." md5sum="2c8082f4f12a294148121f918bc8228d" name="lib/vendor/php-resque/lib/Resque.php" role="php" />
+   <file baseinstalldir="." md5sum="013b3181e975c8b99d87e47c06ce02c9" name="lib/vendor/php-resque/lib/Redisent/LICENSE" role="data" />
+   <file baseinstalldir="." md5sum="edcd706d2df0d4e6dcd0e14de2d1317e" name="lib/vendor/php-resque/lib/Redisent/README.markdown" role="data" />
+   <file baseinstalldir="." md5sum="4f9598f6ba2b861b0f786d155d515b8e" name="lib/vendor/php-resque/lib/Redisent/Redisent.php" role="php" />
+   <file baseinstalldir="." md5sum="f70732425f47d93b97445c2dad86ef4c" name="lib/vendor/php-resque/lib/Redisent/RedisentCluster.php" role="php" />
+   <file baseinstalldir="." md5sum="74cdeee9c11b16281047c688b9a5a7fe" name="lib/vendor/php-resque/lib/Resque/Exception.php" role="php" />
+   <file baseinstalldir="." md5sum="7d550f0be1f257fe547dda6645c90378" name="lib/vendor/php-resque/lib/Resque/Failure.php" role="php" />
+   <file baseinstalldir="." md5sum="65e69b30b29ff903c1561d4e9b77c4c0" name="lib/vendor/php-resque/lib/Resque/Job.php" role="php" />
+   <file baseinstalldir="." md5sum="927f40c3163c9cbaffbf81d458caeabb" name="lib/vendor/php-resque/lib/Resque/Redis.php" role="php" />
+   <file baseinstalldir="." md5sum="ede600adbc659c8e73bc0336ed5a7577" name="lib/vendor/php-resque/lib/Resque/RedisCluster.php" role="php" />
+   <file baseinstalldir="." md5sum="47ad4e37d048f9d49c43ed4f32c232d9" name="lib/vendor/php-resque/lib/Resque/Stat.php" role="php" />
+   <file baseinstalldir="." md5sum="f595493cfd402a1e7b621a123fbef763" name="lib/vendor/php-resque/lib/Resque/Worker.php" role="php" />
+   <file baseinstalldir="." md5sum="b76113ee581156d1de798a35ea720e00" name="lib/vendor/php-resque/lib/Resque/Failure/Interface.php" role="php" />
+   <file baseinstalldir="." md5sum="6f39f21742c4bb60594cac6dcad8d239" name="lib/vendor/php-resque/lib/Resque/Failure/Redis.php" role="php" />
+   <file baseinstalldir="." md5sum="26c883256bb41075b42fe0498fcc2902" name="lib/vendor/php-resque/lib/Resque/Job/DirtyExitException.php" role="php" />
+   <file baseinstalldir="." md5sum="9329b43b6492ad9454121610f2418259" name="lib/vendor/php-resque/lib/Resque/Job/Status.php" role="php" />
+   <file baseinstalldir="." md5sum="4ddf9edad1f605244fb07d9a070d20c2" name="lib/vendor/php-resque/test/misc/redis.conf" role="data" />
+   <file baseinstalldir="." md5sum="cb2107a588fea5299ecc3c0d312bc00a" name="lib/vendor/php-resque/test/Resque/Tests/bootstrap.php" role="php" />
+   <file baseinstalldir="." md5sum="04c9f49b68a69f040bdbffcc363d0a5f" name="lib/vendor/php-resque/test/Resque/Tests/JobStatusTest.php" role="php" />
+   <file baseinstalldir="." md5sum="421faf9052f80847a8eac5f1ed48c8f9" name="lib/vendor/php-resque/test/Resque/Tests/JobTest.php" role="php" />
+   <file baseinstalldir="." md5sum="c60c3a484ca557d5c65d73feb95de386" name="lib/vendor/php-resque/test/Resque/Tests/StatTest.php" role="php" />
+   <file baseinstalldir="." md5sum="e1f0005abd6167518be614c49400f79c" name="lib/vendor/php-resque/test/Resque/Tests/TestCase.php" role="php" />
+   <file baseinstalldir="." md5sum="3d3cfca553be027e22c43129e70fdccc" name="lib/vendor/php-resque/test/Resque/Tests/WorkerTest.php" role="php" />
+   <file baseinstalldir="." md5sum="953c93f7a74ad1c1bc219f433993f91f" name="LICENSE" role="data" />
+   <file baseinstalldir="." md5sum="88f982200e377cac0c62ce372254498e" name="README" role="data" />
+   <file baseinstalldir="." md5sum="88f982200e377cac0c62ce372254498e" name="README.markdown" role="data" />
+   <file baseinstalldir="." md5sum="e20f825bf78da6924af31934443c501b" name="sfResquePlugin-0.1.0.tgz" role="data" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.2</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+   <package>
+    <name>symfony</name>
+    <channel>pear.symfony-project.com</channel>
+    <min>1.3.0</min>
+    <max>1.5.0</max>
+    <exclude>1.5.0</exclude>
+   </package>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <date>2010-11-18</date>
+   <license uri="http://www.opensource.org/licenses/mit-license.html">MIT</license>
+   <notes>
+&lt;none&gt;
+   </notes>
+  </release>
+ </changelog>
+</package>
