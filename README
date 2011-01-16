@@ -31,11 +31,15 @@ Just stick the plugin in the right place...
 It's fairly simple. Create a file `config/resque.yml` and set your options.
 
     prod:
+      database: 0
       server:
         - 10.0.0.9:6379
         - 10.0.0.8:6379
     all:
-      server: 127.0.0.1:6379
+      database: 1
+      server:   127.0.0.1:6379
+
+`database` option is used to select what redis database is going to be used by each environment.
 
 Along with `php-resque`, you can cluster your Redis servers or just supply a single server. In the above example, `prod` is clustered while all other environments will connect to the local address.
 

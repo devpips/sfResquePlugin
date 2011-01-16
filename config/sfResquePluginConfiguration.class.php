@@ -41,7 +41,7 @@ class sfResquePluginConfiguration extends sfPluginConfiguration
       $config = sfRedisConfigHandler::getConfiguration($configPaths);
     }
     
-    Resque::setBackend($config['server']);
+    Resque::setBackend($config['server'], $config['database']);
   }
 }
 
