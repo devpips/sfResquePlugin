@@ -14,8 +14,7 @@ The key differences between php-resque and this plugin is the configuration is h
 Just stick the plugin in the right place...
 
     git submodule add git://github.com/devpips/sfResquePlugin.git plugins/sfResquePlugin
-    git submodule init
-    git submodule update
+    git submodule update --init --recursive
 
 ...and then enable it in `config/ProjectConfiguration.class.php`.
 
